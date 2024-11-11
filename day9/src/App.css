@@ -1,0 +1,15 @@
+
+
+#disp{
+  border:5px solid grey;
+  border-color: rgb(8, 8, 8) ;
+  border-radius: 10px;
+  width:50%;
+}
+
+h1{
+  background-color: aquamarine;
+}
+h2{
+  background-color: rgb(255, 127, 197);
+}
