@@ -1,0 +1,25 @@
+.disp{
+    display:flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(35, 11, 250);
+}
+
+.header{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+    background-color:rgb(82, 172, 200);
+    width:70%;
+    height:40px;
+}
+
+.btn{
+    width: 70%;
+    height:40px;
+    background-color:rgb(82, 172, 200);
+    margin:20px;
+    font-size:40px;
+
+}
