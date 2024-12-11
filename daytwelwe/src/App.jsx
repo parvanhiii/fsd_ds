@@ -1,27 +1,27 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainLayout from './Components/MainLayout';
-import Dasboard from './Components/Dasboard';
-import Login from './Components/Login';
-import Logout from './Components/Logout';
-import Register from './Components/Register';
-
-function App() {
-
-
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./Components/MainLayout";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
+import DashBoard from "./Components/Dasboard";
+import Logout from "./Components/Logout";
+const App = () => {
+  const [data, setData] = useState();
   return (
     <div>
-   <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<MainLayout />}>
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      
-    </Route>
-  </Routes>
-</BrowserRouter>
+      {JSON.stringify(data)}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/register" element={<Register regData={setData} />} />
+            <Route path="/login" element={<Login regLogin={data} />} />
+          </Route>
+          <Route path="/dashboard" element={<DashBoard regDash={data} />} />
+          <Route path="/logout" element={<Logout regLog={setData} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

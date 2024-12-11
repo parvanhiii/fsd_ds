@@ -1,19 +1,28 @@
-import React from 'react'
-import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-const Register = () => {
-    const[name,Setname]=useState();
-    const[email,Setemail]=useState();
-    const[password,Setpassword]=useState();
-    const data=  {name ,email, password}
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+const Register = ({regData}) => {
+    const[name,setName]=useState();
+    const[email,setEmail]=useState();
+    const[password,setPassword]=useState();
+    const data={name,email,password}
+
+    const handleregister=(e)=>{
+      e.preventDefault();
+      alert("User Registered successfully");
+      regData(data);
+      
+    };
   return (
     <div>
-    {JSON.stringify(data)};
+        {JSON.stringify(data)}
+       
       <form>
         <div className="form-group">
           <label>Name</label>
           <input
-            type="text" onChange={(e)=>Setname(e.target.value)}
+            type="text"
+            onChange={(e)=>setName(e.target.value)}
             className="form-control"
             placeholder="Enter Name"
           />
@@ -21,7 +30,8 @@ const Register = () => {
         <div className="form-group">
           <label>Email address</label>
           <input
-            type="email" onChange={(e)=>Setemail(e.target.value)}
+            type="email"
+            onChange={(e)=>setEmail(e.target.value)}
             className="form-control"
             placeholder="Enter email"
           />
@@ -30,18 +40,19 @@ const Register = () => {
           <label>Password</label>
           <input
             type="password"
+            onChange={(e)=>setPassword(e.target.value)}
             className="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button onClick={handleregister} className="btn btn-primary">
           Submit
         </button>
-      </form>  
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
