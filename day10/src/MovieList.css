@@ -1,0 +1,77 @@
+/* Base styles */
+.movie-list {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+.movie-card {
+    width: 25%;
+    margin: 20px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid wheat;
+    border-radius: 10px;
+}
+.movie-img {
+    width: 80%;
+    height: 60%;
+    margin: 10px;
+    padding: 20px;
+}
+.movie-card h1 {
+    color: azure;
+    background-color: grey;
+    font-size: 20px;
+}
+.movie-card h2 {
+    color: azure;
+    background-color: grey;
+    font-size: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .movie-card {
+        width: 30%; /* Adjust card size */
+    }
+    .movie-card h1 {
+        font-size: 18px; /* Adjust text size */
+    }
+    .movie-card h2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-card {
+        width: 45%;
+        margin: 15px; /* Adjust margin for better spacing */
+    }
+    .movie-card h1 {
+        font-size: 16px;
+    }
+    .movie-card h2 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-card {
+        width: 90%;
+        margin: 10px auto; /* Center the cards on small screens */
+    }
+    .movie-img {
+        width: 100%;
+        height: auto; /* Allow image to scale */
+    }
+    .movie-card h1 {
+        font-size: 14px;
+    }
+    .movie-card h2 {
+        font-size: 12px;
+    }
+}

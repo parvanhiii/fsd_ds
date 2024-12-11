@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <h1></h1>
+    <!-- <button id="btn" onclick="changetitle()">Click here</button> -->
+     <button id="btn">Click Here</button>
+    
+    <script>
+        changetitle= ()=>{
+        let h1 = document.querySelector('h1');
+        h1.textContent = "I am in heading tag";
+        }
+        let btn=document.getElementById('btn');
+        btn.addEventListener('click',changetitle);
+    </script>
+</body>
+</html>
