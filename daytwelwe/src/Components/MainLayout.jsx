@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import {Link,Outlet} from 'react-router-dom';
 import "./MainLayout.css";
@@ -18,4 +19,4 @@ const MainLayout = () => {
     );
 };
 
-export default MainLayout
+export default MainLayout;

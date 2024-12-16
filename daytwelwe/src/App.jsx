@@ -5,6 +5,7 @@ import Register from "./Components/Register";
 import Login from "./Components/Login";
 import DashBoard from "./Components/Dasboard";
 import Logout from "./Components/Logout";
+import WeatherApp from "./Components/WeatherApp"
 const App = () => {
   const [data, setData] = useState();
   return (
@@ -18,10 +19,11 @@ const App = () => {
           </Route>
           <Route path="/dashboard" element={<DashBoard regDash={data} />} />
           <Route path="/logout" element={<Logout regLog={setData} />} />
+          <Route path="/weather" element={<WeatherApp />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 };
 
-export default App;
+export default App
